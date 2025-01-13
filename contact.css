@@ -1,0 +1,110 @@
+/* Body with background image */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Raleway', sans-serif;
+    /* Other background properties */
+}
+
+
+/* Contact Form Container */
+.contact-form {
+    padding: 20px;
+}
+
+/* Labels for form fields */
+label {
+    color: white; /* Set label text color to white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Light shadow for better readability */
+}
+
+/* Text inputs with transparent background */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust the alpha value (0.5 for 50% opacity) */
+    color: black; /* Set text color to white */
+    transition: background-color 0.3s ease; /* Add transition for a smoother effect */
+    height: 40px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Maintain the same background on focus */
+    color: black;
+}
+
+/* Target the specific textarea with the ID 'message' */
+textarea#message {
+    background-color: rgba(255, 255, 255, 0.4); /* Adjust the alpha value (0.5 for 50% opacity) */
+    color: black; /* Set text color to white */
+    height: 200px;
+    resize: vertical;
+}
+
+/* Contact Form Container */
+.container {
+    padding-top: 150px; /* Adjust top padding as needed */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    resize: vertical;
+}
+
+.container h1 {
+    color: white;
+    margin-top: 5%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Light shadow for better readability */
+}
+
+
+/* Columns for form fields */
+.col {
+    flex: 1; /* Equal width columns */
+    margin-right: 10px; /* Spacing between columns */
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+    .col {
+        flex: 100%; /* Full width columns on small screens */
+        margin-right: 0; /* Remove spacing between columns */
+        margin-bottom: 10px; /* Add margin bottom for separation */
+    }
+}
+
+/* Navbar styling for transparent background */
+.navbar {
+    background-color: transparent !important;
+    box-shadow: none; /* Removes any shadow or border */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #fff !important; /* Sets brand and link text color to white */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adds a subtle shadow for readability */
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: red !important; /* Lightens the color on hover for visual feedback */
+}
+
+/* Adjust the toggler (hamburger) icon color */
+.navbar-light .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6); /* Lightens the border of the button */
+    background-color: rgba(0, 0, 0, 0.3); /* Adds a semi-transparent background for visibility */
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}

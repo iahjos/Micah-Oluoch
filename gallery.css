@@ -1,0 +1,60 @@
+/* Navbar styling for transparent background */
+.navbar {
+    background-color: transparent !important;
+    box-shadow: none; /* Removes any shadow or border */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #fff !important; /* Sets brand and link text color to white */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adds a subtle shadow for readability */
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: red !important; /* Lightens the color on hover for visual feedback */
+}
+
+/* Adjust the toggler (hamburger) icon color */
+.navbar-light .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6); /* Lightens the border of the button */
+    background-color: rgba(0, 0, 0, 0.3); /* Adds a semi-transparent background for visibility */
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Ensure the carousel fills the entire viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#carouselIndicator {
+    width: 100vw;
+    height: 100vh;
+}
+
+.carousel-item {
+    width: 100vw;
+    height: 100vh; /* Ensures each item fills the viewport height */
+}
+
+/* Make images cover the entire carousel item without stretching */
+.carousel-item img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center; /* Centers the image within the item */
+}
+
+/* Optional: Style carousel caption for readability */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 80%;
+}
