@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&family=Raleway:ital,wght@1,100;1,800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+/* Base Styles */
 html, body {
     margin: 0;
     padding: 0;
@@ -28,6 +29,7 @@ video {
     z-index: -1;
 }
 
+/* Header */
 header {
     position: absolute;
     top: 40%;
@@ -44,12 +46,13 @@ header h1 {
     text-transform: uppercase;
     line-height: 1;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Light shadow for better readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Light shadow for readability */
 }
 
+/* Description Box */
 .description {
     position: absolute;
-    bottom: 40%;
+    bottom: 30%; /* Adjusted from 40% to prevent overlap with header */
     width: auto;
     max-width: 80%;
     padding: 15px 20px;
@@ -70,9 +73,10 @@ header h1 {
     margin: 0;
 }
 
+/* Buttons Container */
 .button-container {
     position: absolute;
-    bottom: 30%;
+    bottom: 20%; /* Adjusted from 30% */
     width: 100%;
     text-align: center;
     z-index: 1;
@@ -100,30 +104,65 @@ header h1 {
     color: #000;
 }
 
-/* Navbar styling for transparent background */
+/* Navbar Styling */
 .navbar {
     background-color: transparent !important;
-    box-shadow: none; /* Removes any shadow or border */
+    box-shadow: none;
 }
 
 .navbar .navbar-brand,
 .navbar .nav-link {
-    color: #fff !important; /* Sets brand and link text color to white */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adds a subtle shadow for readability */
+    color: #fff !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     transition: color 0.3s;
 }
 
 .navbar .nav-link:hover {
-    color: red !important; /* Lightens the color on hover for visual feedback */
+    color: red !important;
 }
 
-/* Adjust the toggler (hamburger) icon color */
 .navbar-light .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.6); /* Lightens the border of the button */
-    background-color: rgba(0, 0, 0, 0.3); /* Adds a semi-transparent background for visibility */
+    border-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+/* Media Query for Small Screens (Mobile/iPhone) */
+@media (max-width: 480px) {
+    header {
+        top: 25%; /* Adjust header position to create more space for description */
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+
+    .description {
+        bottom: 20%; /* Move the description box up slightly */
+        max-width: 90%;
+        padding: 10px 15px;
+    }
+
+    .button-container .btn-Contact,
+    .button-container .btn-Gallery {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .navbar {
+        font-size: 0.8rem;
+    }
+
+    .navbar .nav-link {
+        padding: 8px 10px;
+    }
+
+    .navbar-toggler-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
